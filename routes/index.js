@@ -57,4 +57,12 @@ router.route('/contact')
 
   });
 
+  router.get('/login', function (req, res, next) {
+    res.render('login', { title: 'Login to your account' })
+  });
+
+  router.get('/register', function (req, res, next) {
+    res.render('register', { title: 'Sign Up' })
+  });
+
 module.exports = router;
