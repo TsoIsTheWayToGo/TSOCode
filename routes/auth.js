@@ -2,9 +2,15 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 
-router.get('/login', function (req, res, next) {
-  res.render('login', { title: 'Login to your account' })
-});
+router.route('/login')
+  .get(function (req, res, next) {
+    res.render('login', { title: 'Login your account' });
+  })
+  .post(passport.authenticate('local', {
+    failureRedirect: '/login'
+  }), function (req, res) {
+    res.redirect('/');
+  });
 
 router.route('/register')
   .get(function (req, res, next) {
@@ -38,5 +44,8 @@ router.route('/register')
     }
   });
 
-
+router.get('/logout', function (req, res) {
+  req.logout();
+  res.redirect('/');
+})
 module.exports = router;
