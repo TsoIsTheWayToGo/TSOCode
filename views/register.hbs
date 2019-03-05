@@ -1,4 +1,5 @@
 <form class="form-signin" method="post">
+
   <h2 class="form-signin-heading text-center">New Account</h2>
   <br/>
 
@@ -12,4 +13,10 @@
  
   <hr>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+
+      {{#each errorMessages}}
+    <div class="alert alert-danger">
+      {{this.msg}}
+    </div>
+    {{/each}}
 </form>

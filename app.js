@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
-const indexRoute = require('./routes/index');
-const authRoute = require('./routes/auth');
+const indexRouter = require('./routes/index');
+const authRouter = require('./routes/auth');
 
 
 
@@ -37,16 +37,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRoute);
-app.use('/', authRoute);
 app.use(session({
   secret: config.sessionKey,
   resave: false,
   saveUninitialized: true,
   cookie: {secure: true}
 }));
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+app.use('/', authRouter);
 
 
 app.use(passport.initialize());
