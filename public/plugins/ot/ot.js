@@ -1,25 +1,3 @@
-Skip to content
-
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-@TsoIsTheWayToGo Sign out
-The password you provided is weak and can be easily guessed.To increase your security, please change your password as soon as possible.
-
-Read our documentation on safer password practices.
-
-46
-908 111 Operational - Transformation / ot.js
-Code  Issues 8  Pull requests 2  Projects 0  Wiki  Insights
-ot.js / dist / ot.js
-@timjb timjb update codemirror to v4.8
-c4f27a1  on Nov 26, 2014
-@timjb @jfromaniello @espadrine @mikelehen @fe9lix
-1888 lines(1628 sloc)  59.1 KB
-
 /*
  *    /\
  *   /  \ ot 0.0.14
@@ -1907,15 +1885,3 @@ ot.EditorClient = (function () {
 
   return EditorClient;
 }());
-© 2019 GitHub, Inc.
-  Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
