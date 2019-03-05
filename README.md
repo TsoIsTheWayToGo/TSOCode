@@ -3,6 +3,6 @@ TSOCode is my version of sites like [codeshare.io](https://codeshare.io/) and sk
 
 ## Technology Used
 * Nodejs
-*Express
-*MongoDB
-*Swag
+* Express
+* MongoDB
+* Swag
