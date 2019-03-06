@@ -1,101 +1,46 @@
 body {
-  min-height: 200px;
+  min-height: 2000px;
   padding-top: 70px;
 }
 
 .form-signin {
   max-width: 330px;
-  padding: 1px;
+  padding: 15px;
   margin: 0 auto;
 }
 
-
-#wrapper {
-  padding-left: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.CodeMirror {
+  height:  600px
 }
 
-#wrapper.toggled {
-  padding-right: 250px;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-#sidebar-wrapper {
-  z-index: 1000;
-  position: fixed;
-  right: 250px;
-  width: 0;
-  height: 100%;
-  margin-right: -250px;
-  overflow-y: auto;
-  background: #000;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+#my-video {
+  margin-top: 15px;
+  width: 280px;
+  height: auto;
+  background-color: #eee;
 }
 
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
-}
-
-#page-content-wrapper {
+#second-video {
   width: 100%;
-  position: absolute;
-  padding: 15px;
+  height: 75%;
+  max-height: 480px;
+  background-color: #eee;
 }
 
-#wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  margin-right: 0px;
+#video-container {
+  text-align: center;
 }
 
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#step1-error, #step2, #step3 {
+  display: none;
 }
 
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 40px;
-}
-
-.sidebar-nav li a {
-  display: block;
-  text-decoration: none;
-  color: #999999;
-}
-
-.sidebar-nav li a:hover {
-  text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.sidebar-nav li a:active, .sidebar-nav li a:focus {
-  text-decoration: none;
-}
-
-.sidebar-nav>.sidebar-brand {
-  height: 65px;
-  font-size: 18px;
-  line-height: 60px;
-}
-
-.sidebar-nav>.sidebar-brand a {
-  color: #999999;
-}
-
-.sidebar-nav>.sidebar-brand a:hover {
-  color: #fff;
-  background: none;
+#my-id {
+  font-weight: bold;
 }
