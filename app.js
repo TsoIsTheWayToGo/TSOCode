@@ -33,9 +33,6 @@ global.Task = require('./models/task');
 const app = express();
 var ExpressPeerServer = require('peer').ExpressPeerServer;
 
-app.get('/', function(req, res, next) {
-	res.send('Hello world!');
-});
 
 var server = app.listen(9000);
 
