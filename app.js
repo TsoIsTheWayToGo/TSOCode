@@ -6,9 +6,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 
 
-var https = require('https');
-var http = require('http');
-var fs = require('fs');
+
 
 const expressValidator = require('express-validator');
 
@@ -32,16 +30,8 @@ mongoose
 global.User = require('./models/user');
 global.Task = require('./models/task');
 
-var options = {
-  key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
-  cert: fs.readFileSync('test/fixtures/keys/agent2-cert.cert')
-};
-
 const app = express();
-// Create an HTTP service.
-http.createServer(app).listen(80);
-// Create an HTTPS service identical to the HTTP service.
-https.createServer(options, app).listen(443);
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
