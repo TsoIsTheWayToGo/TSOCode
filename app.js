@@ -31,25 +31,7 @@ global.User = require('./models/user');
 global.Task = require('./models/task');
 
 const app = express();
-var ExpressPeerServer = require('peer').ExpressPeerServer;
 
-app.get('/', function (req, res, next) { res.send('Hello world!'); });
-
-var server = app.listen(9000);
-
-var options = {
-  debug: true
-}
-
-app.use('/api', ExpressPeerServer(server, options));
-
-// OR
-
-var server = require('http').createServer(app);
-
-app.use('/peerjs', ExpressPeerServer(server, options));
-
-server.listen(9000);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
