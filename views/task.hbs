@@ -120,9 +120,9 @@
   // Compatibility shim
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
   // PeerJS object
-  var peer = new Peer(username + roomId, 'someid', {
+  var peer = new Peer(username + roomId, {
                 secure: true,
-                path: /peerjs 
+                path: '/peerjs', 
                 host: 'tsocode.herokuapp.com', 
                 port: 443,
                 key: 'tsocode',
