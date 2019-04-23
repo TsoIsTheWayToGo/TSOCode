@@ -12,7 +12,7 @@
     "express": "~4.16.0",
     "express-session": "^1.15.1",
     "express-validator": "^3.1.2",
-    "hbs": "~4.0.1",
+    "hbs": "^4.0.4",
     "http-errors": "~1.6.2",
     "mongoose": "^4.13.18",
     "morgan": "~1.9.0",
@@ -21,6 +21,7 @@
     "passport": "^0.3.2",
     "passport-facebook": "^3.0.0",
     "passport-local": "^1.0.0",
+    "peerjs": "^1.0.0",
     "simple-peer": "^9.2.1",
     "socket.io": "^1.7.3"
   }
