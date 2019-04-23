@@ -66,7 +66,7 @@
   var SocketIOAdapter = ot.SocketIOAdapter;
   var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-  var socket = io.connect('http://localhost:3000');
+  var socket = io.connect();
   var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
     lineNumbers: true,
     theme: "monokai"
@@ -121,9 +121,12 @@
   navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
   // PeerJS object
   var peer = new Peer(username + roomId, 'someid', {
-                secure: true, 
-                host: 'your-app-name.herokuapp.com', 
+                secure: true,
+                path: /peerjs 
+                host: 'tsocode.herokuapp.com', 
                 port: 443,
+                key: 'tsocode',
+                debug: true
     });
 
   peer.on('open', function () {
