@@ -18,6 +18,19 @@ html {
   margin-top: -24px;
   margin-bottom: -50px;
 }
+.tasklanding {
+  position: relative;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('https://s3-us-west-1.amazonaws.com/shareebnb/portfolio/task.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
+}
 
 .landing-inner {
   padding-top: 80px;
